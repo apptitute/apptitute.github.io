@@ -1,0 +1,13 @@
+{
+  "name": "CloudCompare",
+  "short_name": "CloudCom",
+  "icons": [{
+    "src": "app-icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#fafafa"
+}
