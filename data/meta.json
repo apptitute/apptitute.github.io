@@ -1,0 +1,47 @@
+{
+    "providers": [
+        {
+            "key": "aws",
+            "name": "AWS",
+            "desc": "Amazon Web Service"
+        },
+        {
+            "key": "azure",
+            "name": "Azure",
+            "desc": "Microsoft Azure"
+        },
+        {
+            "key": "gcp",
+            "name": "GCP",
+            "desc": "Google Cloud Platform"
+        }
+    ],
+    "sgs": [
+        {
+            "key": "compute",
+            "title": "Compute",
+            "desc": "Service similar to Cloud Storage but instead of"
+        },
+        {
+            "key": "storage",
+            "title": "Storage",
+            "desc": "Storage Description here"
+        },
+        {
+            "key": "network",
+            "title": "Network",
+            "desc": "Network Description here"
+        },
+        {
+            "key": "database",
+            "title": "Database",
+            "desc": "Database Description here"
+        }
+    ],
+    "regions": [
+        {
+            "key": "mumbai",
+            "title": "Mumbai"
+        }
+    ]
+}

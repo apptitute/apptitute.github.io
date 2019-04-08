@@ -1,0 +1,49 @@
+{
+    "name": "compute",
+    "desc": "The text goes here",
+    "product": [
+        {
+            "name": "EC2 Instance",
+            "sub-products": [
+                {
+                    "name": "General Purpose - Current Generation",
+                    "skus": [
+                        {
+                            "sku": "t3.nano",
+                            "cpu": 2,
+                            "mem": 0.5,
+                            "storage": "EBS",
+                            "price": 0.0056
+                        },
+                        {
+                            "sku": "t3.micro",
+                            "cpu": 2,
+                            "mem": 1,
+                            "storage": "EBS",
+                            "price": 0.0112
+                        }
+                    ]
+                },
+                {
+                    "name": "Compute Optimized - Current Generation",
+                    "skus": [
+                        {
+                            "sku": "m5.large",
+                            "cpu": 2,
+                            "mem": 8,
+                            "storage": "EBS",
+                            "price": 0.101
+                        },
+                        {
+                            "sku": "m5.xlarge",
+                            "cpu": 4,
+                            "mem": 16,
+                            "storage": "EBS",
+                            "price": 0.202
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
