@@ -20,22 +20,147 @@
         {
             "key": "compute",
             "title": "Compute",
-            "desc": "Service similar to Cloud Storage but instead of"
-        },
-        {
-            "key": "storage",
-            "title": "Storage",
-            "desc": "Storage Description here"
-        },
-        {
-            "key": "network",
-            "title": "Network",
-            "desc": "Network Description here"
-        },
-        {
-            "key": "database",
-            "title": "Database",
-            "desc": "Database Description here"
+            "desc": "Service similar to Cloud Storage but instead of",
+            "providers": {
+                "aws": {
+                    "name": "EC2 Instance",
+                    "desc": "EC2 everything has to go here",
+                    "productgroup": [
+                        {
+                            "id": 1,
+                            "name": "General Purpose-Current Generation",
+                            "skus": [
+                                {
+                                    "sku": "t3.nano",
+                                    "cpu": 2,
+                                    "mem": 0.5,
+                                    "storage": "EBS",
+                                    "price": 0.0056
+                                },
+                                {
+                                    "sku": "t3.micro",
+                                    "cpu": 2,
+                                    "mem": 1,
+                                    "storage": "EBS",
+                                    "price": 0.0112
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Compute Optimized-Current Generation",
+                            "skus": [
+                                {
+                                    "sku": "m5.large",
+                                    "cpu": 2,
+                                    "mem": 8,
+                                    "storage": "EBS",
+                                    "price": 0.101
+                                },
+                                {
+                                    "sku": "m5.xlarge",
+                                    "cpu": 4,
+                                    "mem": 16,
+                                    "storage": "EBS",
+                                    "price": 0.202
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "azure": {
+                    "name": "VM Instance",
+                    "desc": "TheAzure text goes here",
+                    "productgroup": [
+                        {
+                            "id": 1,
+                            "name": "General Purpose - Current Generation",
+                            "skus": [
+                                {
+                                    "sku": "t3.nano",
+                                    "cpu": 2,
+                                    "mem": 0.5,
+                                    "storage": "EBS",
+                                    "price": 0.0056
+                                },
+                                {
+                                    "sku": "t3.micro",
+                                    "cpu": 2,
+                                    "mem": 1,
+                                    "storage": "EBS",
+                                    "price": 0.0112
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Compute Optimized - Current Generation",
+                            "skus": [
+                                {
+                                    "sku": "m5.large",
+                                    "cpu": 2,
+                                    "mem": 8,
+                                    "storage": "EBS",
+                                    "price": 0.101
+                                },
+                                {
+                                    "sku": "m5.xlarge",
+                                    "cpu": 4,
+                                    "mem": 16,
+                                    "storage": "EBS",
+                                    "price": 0.202
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "gcp": {
+                    "name": "Compute Instance ",
+                    "desc": "The GCP text goes here",
+                    "productgroup": [
+                        {
+                            "id": 1,
+                            "name": "General Purpose - Current Generation",
+                            "skus": [
+                                {
+                                    "sku": "t3.nano",
+                                    "cpu": 2,
+                                    "mem": 0.5,
+                                    "storage": "EBS",
+                                    "price": 0.0056
+                                },
+                                {
+                                    "sku": "t3.micro",
+                                    "cpu": 2,
+                                    "mem": 1,
+                                    "storage": "EBS",
+                                    "price": 0.0112
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Compute Optimized - Current Generation",
+                            "skus": [
+                                {
+                                    "sku": "m5.large",
+                                    "cpu": 2,
+                                    "mem": 8,
+                                    "storage": "EBS",
+                                    "price": 0.101
+                                },
+                                {
+                                    "sku": "m5.xlarge",
+                                    "cpu": 4,
+                                    "mem": 16,
+                                    "storage": "EBS",
+                                    "price": 0.202
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
         }
     ],
     "regions": [
