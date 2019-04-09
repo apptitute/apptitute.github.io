@@ -20,7 +20,7 @@
         {
             "key": "compute",
             "title": "Compute",
-            "desc": "Service similar to Cloud Storage but instead of",
+            "desc": "Virtual Machine (VM) hosted on Providers Infrastructure",
             "providers": {
                 "aws": {
                     "name": "EC2 Instance",
@@ -29,40 +29,286 @@
                         {
                             "id": 1,
                             "name": "General Purpose-Current Generation",
+                            "desc": "TODO",
                             "skus": [
                                 {
+                                    "id": 1,
                                     "sku": "t3.nano",
                                     "cpu": 2,
                                     "mem": 0.5,
-                                    "storage": "EBS",
+                                    "storage": "EBS Only",
                                     "price": 0.0056
                                 },
                                 {
+                                    "id": 2,
                                     "sku": "t3.micro",
                                     "cpu": 2,
                                     "mem": 1,
-                                    "storage": "EBS",
+                                    "storage": "EBS Only",
                                     "price": 0.0112
+                                },
+                                {
+                                    "id": 3,
+                                    "sku": "t3.small",
+                                    "cpu": 2,
+                                    "mem": 2,
+                                    "storage": "EBS Only",
+                                    "price": 0.0224
+                                },
+                                {
+                                    "id": 4,
+                                    "sku": "t3.medium",
+                                    "cpu": 2,
+                                    "mem": 4,
+                                    "storage": "EBS Only",
+                                    "price": 0.0448
+                                },
+                                {
+                                    "id": 5,
+                                    "sku": "t3.large",
+                                    "cpu": 2,
+                                    "mem": 8,
+                                    "storage": "EBS Only",
+                                    "price": 0.0896
+                                },
+                                {
+                                    "id": 6,
+                                    "sku": "t3.xlarge",
+                                    "cpu": 4,
+                                    "mem": 16,
+                                    "storage": "EBS Only",
+                                    "price": 0.1792
+                                },
+                                {
+                                    "id": 7,
+                                    "sku": "t3.2xlarge",
+                                    "cpu": 8,
+                                    "mem": 32,
+                                    "storage": "EBS Only",
+                                    "price": 0.3584
+                                },
+                                {
+                                    "id": 8,
+                                    "sku": "t2.nano",
+                                    "cpu": 1,
+                                    "mem": 0.5,
+                                    "storage": "EBS Only",
+                                    "price": 0.0062
+                                },
+                                {
+                                    "id": 9,
+                                    "sku": "t2.micro",
+                                    "cpu": 1,
+                                    "mem": 1,
+                                    "storage": "EBS Only",
+                                    "price": 0.0124
+                                },
+                                {
+                                    "id": 10,
+                                    "sku": "t2.small",
+                                    "cpu": 1,
+                                    "mem": 2,
+                                    "storage": "EBS Only",
+                                    "price": 0.0248
+                                },
+                                {
+                                    "id": 11,
+                                    "sku": "t2.medium",
+                                    "cpu": 2,
+                                    "mem": 4,
+                                    "storage": "EBS Only",
+                                    "price": 0.0496
+                                },
+                                {
+                                    "id": 12,
+                                    "sku": "t2.large",
+                                    "cpu": 2,
+                                    "mem": 8,
+                                    "storage": "EBS Only",
+                                    "price": 0.0992
+                                },
+                                {
+                                    "id": 13,
+                                    "sku": "t2.xlarge",
+                                    "cpu": 4,
+                                    "mem": 16,
+                                    "storage": "EBS Only",
+                                    "price": 0.1984
+                                },
+                                {
+                                    "id": 14,
+                                    "sku": "t2.2xlarge",
+                                    "cpu": 8,
+                                    "mem": 32,
+                                    "storage": "EBS Only",
+                                    "price": 0.3968
                                 }
                             ]
                         },
                         {
                             "id": 2,
                             "name": "Compute Optimized-Current Generation",
+                            "desc": "TODO",
                             "skus": [
                                 {
+                                    "id": 1,
                                     "sku": "m5.large",
                                     "cpu": 2,
                                     "mem": 8,
-                                    "storage": "EBS",
+                                    "storage": "EBS Only",
                                     "price": 0.101
                                 },
                                 {
+                                    "id": 2,
                                     "sku": "m5.xlarge",
                                     "cpu": 4,
                                     "mem": 16,
-                                    "storage": "EBS",
+                                    "storage": "EBS Only",
                                     "price": 0.202
+                                },
+                                {
+                                    "id": 3,
+                                    "sku": "m5.2xlarge",
+                                    "cpu": 8,
+                                    "mem": 32,
+                                    "storage": "EBS Only",
+                                    "price": 0.404
+                                },
+                                {
+                                    "id": 4,
+                                    "sku": "m5.4xlarge",
+                                    "cpu": 16,
+                                    "mem": 64,
+                                    "storage": "EBS Only",
+                                    "price": 0.808
+                                },
+                                {
+                                    "id": 5,
+                                    "sku": "m5.12xlarge",
+                                    "cpu": 48,
+                                    "mem": 192,
+                                    "storage": "EBS Only",
+                                    "price": 2.424
+                                },
+                                {
+                                    "id": 6,
+                                    "sku": "m5.24xlarge",
+                                    "cpu": 96,
+                                    "mem": 384,
+                                    "storage": "EBS Only",
+                                    "price": 4.848
+                                },
+                                {
+                                    "id": 7,
+                                    "sku": "m5.metal",
+                                    "cpu": 96,
+                                    "mem": 384,
+                                    "storage": "EBS Only",
+                                    "price": 4.848
+                                },
+                                {
+                                    "id": 8,
+                                    "sku": "m5d.large",
+                                    "cpu": 2,
+                                    "mem": 8,
+                                    "storage": "1 x 75 NVMe SSD",
+                                    "price": 0.122
+                                },
+                                {
+                                    "id": 9,
+                                    "sku": "m5d.xlarge",
+                                    "cpu": 4,
+                                    "mem": 16,
+                                    "storage": "1 x 150 NVMe SSD",
+                                    "price": 0.244
+                                },
+                                {
+                                    "id": 10,
+                                    "sku": "m5d.2xlarge",
+                                    "cpu": 8,
+                                    "mem": 32,
+                                    "storage": "1 x 300 NVMe SSD",
+                                    "price": 0.488
+                                },
+                                {
+                                    "id": 11,
+                                    "sku": "m5d.4xlarge",
+                                    "cpu": 16,
+                                    "mem": 64,
+                                    "storage": "2 x 300 NVMe SSD",
+                                    "price": 0.976
+                                },
+                                {
+                                    "id": 12,
+                                    "sku": "m5d.12xlarge",
+                                    "cpu": 48,
+                                    "mem": 192,
+                                    "storage": "2 x 900 NVMe SSD",
+                                    "price": 2.928
+                                },
+                                {
+                                    "id": 13,
+                                    "sku": "m5d.24xlarge",
+                                    "cpu": 96,
+                                    "mem": 384,
+                                    "storage": "4 x 900 NVMe SSD",
+                                    "price": 5.856
+                                },
+                                {
+                                    "id": 14,
+                                    "sku": "m5d.metal",
+                                    "cpu": 96,
+                                    "mem": 384,
+                                    "storage": "4 x 900 NVMe SSD",
+                                    "price": 5.856
+                                },
+                                {
+                                    "id": 15,
+                                    "sku": "m4.large",
+                                    "cpu": 2,
+                                    "mem": 8,
+                                    "storage": "EBS Only",
+                                    "price": 0.105
+                                },
+                                {
+                                    "id": 16,
+                                    "sku": "m4.xlarge",
+                                    "cpu": 4,
+                                    "mem": 16,
+                                    "storage": "EBS Only",
+                                    "price": 0.21
+                                },
+                                {
+                                    "id": 17,
+                                    "sku": "m4.2xlarge",
+                                    "cpu": 8,
+                                    "mem": 32,
+                                    "storage": "EBS Only",
+                                    "price": 0.42
+                                },
+                                {
+                                    "id": 18,
+                                    "sku": "m4.4xlarge",
+                                    "cpu": 16,
+                                    "mem": 64,
+                                    "storage": "EBS Only",
+                                    "price": 0.84
+                                },
+                                {
+                                    "id": 19,
+                                    "sku": "m4.10xlarge",
+                                    "cpu": 40,
+                                    "mem": 160,
+                                    "storage": "EBS Only",
+                                    "price": 2.1
+                                },
+                                {
+                                    "id": 20,
+                                    "sku": "m4.16xlarge",
+                                    "cpu": 64,
+                                    "mem": 256,
+                                    "storage": "EBS Only",
+                                    "price": 3.36
                                 }
                             ]
                         }
@@ -74,41 +320,127 @@
                     "productgroup": [
                         {
                             "id": 1,
-                            "name": "General Purpose - Current Generation",
+                            "name": "A-Series - Entry-level economical VMs for dev/test",
+                            "desc": "TODO",
                             "skus": [
                                 {
-                                    "sku": "t3.nano",
-                                    "cpu": 2,
-                                    "mem": 0.5,
-                                    "storage": "EBS",
-                                    "price": 0.0056
+                                    "id": 1,
+                                    "sku": "A1 v2",
+                                    "cpu": 1,
+                                    "mem": "2",
+                                    "storage": "10",
+                                    "price": 3.1066
                                 },
                                 {
-                                    "sku": "t3.micro",
+                                    "id": 2,
+                                    "sku": "A2 v2",
                                     "cpu": 2,
-                                    "mem": 1,
-                                    "storage": "EBS",
-                                    "price": 0.0112
+                                    "mem": "4",
+                                    "storage": "20",
+                                    "price": 6.4775
+                                },
+                                {
+                                    "id": 3,
+                                    "sku": "A2m v2",
+                                    "cpu": 2,
+                                    "mem": "16",
+                                    "storage": "20",
+                                    "price": 10.4433
+                                },
+                                {
+                                    "id": 4,
+                                    "sku": "A4 v2",
+                                    "cpu": 4,
+                                    "mem": "8",
+                                    "storage": "40",
+                                    "price": 13.6159
+                                },
+                                {
+                                    "id": 5,
+                                    "sku": "A4m v2",
+                                    "cpu": 4,
+                                    "mem": "32  ",
+                                    "storage": "40  ",
+                                    "price": 22.0101
+                                },
+                                {
+                                    "id": 6,
+                                    "sku": "A8 v2",
+                                    "cpu": 8,
+                                    "mem": "16  ",
+                                    "storage": "80  ",
+                                    "price": 28.6197
+                                },
+                                {
+                                    "id": 7,
+                                    "sku": "A8m v2",
+                                    "cpu": 8,
+                                    "mem": "64  ",
+                                    "storage": "80  ",
+                                    "price": 46.2013
                                 }
                             ]
                         },
                         {
                             "id": 2,
-                            "name": "Compute Optimized - Current Generation",
+                            "name": "B-Series - Economical burstable VMs",
+                            "desc": "TODO",
                             "skus": [
                                 {
-                                    "sku": "m5.large",
-                                    "cpu": 2,
-                                    "mem": 8,
-                                    "storage": "EBS",
-                                    "price": 0.101
+                                    "id": 1,
+                                    "sku": "B1LS",
+                                    "cpu": 1,
+                                    "mem": 0.5,
+                                    "storage": 4,
+                                    "price": 0.5156
                                 },
                                 {
-                                    "sku": "m5.xlarge",
+                                    "id": 2,
+                                    "sku": "B1S",
+                                    "cpu": 1,
+                                    "mem": 1,
+                                    "storage": 4,
+                                    "price": 0.9717
+                                },
+                                {
+                                    "id": 3,
+                                    "sku": "B1MS",
+                                    "cpu": 1,
+                                    "mem": 2,
+                                    "storage": 4,
+                                    "price": 1.9829
+                                },
+                                {
+                                    "id": 4,
+                                    "sku": "B2S",
+                                    "cpu": 2,
+                                    "mem": 4,
+                                    "storage": 8,
+                                    "price": 3.8997
+                                },
+                                {
+                                    "id": 5,
+                                    "sku": "B2MS",
+                                    "cpu": 2,
+                                    "mem": 8,
+                                    "storage": 16,
+                                    "price": 7.8655
+                                },
+                                {
+                                    "id": 6,
+                                    "sku": "B4MS",
                                     "cpu": 4,
                                     "mem": 16,
-                                    "storage": "EBS",
-                                    "price": 0.202
+                                    "storage": 32,
+                                    "price": 15.731
+                                },
+                                {
+                                    "id": 7,
+                                    "sku": "B8MS",
+                                    "cpu": 8,
+                                    "mem": 32,
+                                    "storage": 64,
+                                    "price": 31.4619
                                 }
                             ]
                         }
@@ -120,41 +452,119 @@
                     "productgroup": [
                         {
                             "id": 1,
-                            "name": "General Purpose - Current Generation",
+                            "name": "Standard machine types",
+                            "desc": "Standard machine types have 3.75   of memory per vCPU.",
                             "skus": [
                                 {
-                                    "sku": "t3.nano",
-                                    "cpu": 2,
-                                    "mem": 0.5,
-                                    "storage": "EBS",
-                                    "price": 0.0056
+                                    "id": 1,
+                                    "sku": "n1-standard-1",
+                                    "cpu": 1,
+                                    "mem": "3.75 ",
+                                    "storage": "Configured",
+                                    "price": 0.057
                                 },
                                 {
-                                    "sku": "t3.micro",
+                                    "id": 2,
+                                    "sku": "n1-standard-2",
                                     "cpu": 2,
-                                    "mem": 1,
-                                    "storage": "EBS",
-                                    "price": 0.0112
+                                    "mem": "7.5 ",
+                                    "storage": "Configured",
+                                    "price": 0.1141
+                                },
+                                {
+                                    "id": 3,
+                                    "sku": "n1-standard-4",
+                                    "cpu": 4,
+                                    "mem": "15 ",
+                                    "storage": "Configured",
+                                    "price": 0.2282
+                                },
+                                {
+                                    "id": 4,
+                                    "sku": "n1-standard-8",
+                                    "cpu": 8,
+                                    "mem": "30 ",
+                                    "storage": "Configured",
+                                    "price": 0.4564
+                                },
+                                {
+                                    "id": 5,
+                                    "sku": "n1-standard-16",
+                                    "cpu": 16,
+                                    "mem": "60 ",
+                                    "storage": "Configured",
+                                    "price": 0.9127
+                                },
+                                {
+                                    "id": 6,
+                                    "sku": "n1-standard-32",
+                                    "cpu": 32,
+                                    "mem": "120 ",
+                                    "storage": "Configured",
+                                    "price": 1.8255
+                                },
+                                {
+                                    "id": 7,
+                                    "sku": "n1-standard-64",
+                                    "cpu": 64,
+                                    "mem": "240 ",
+                                    "storage": "Configured",
+                                    "price": 3.651
                                 }
                             ]
                         },
                         {
                             "id": 2,
-                            "name": "Compute Optimized - Current Generation",
+                            "name": "High-memory machine types",
+                            "desc": "High-memory machine types have 6.5   of memory per vCPU. High-memory instances are ideal for tasks that require more memory relative to virtual CPUs.",
                             "skus": [
                                 {
-                                    "sku": "m5.large",
+                                    "id": 1,
+                                    "sku": "n1-highmem-2",
                                     "cpu": 2,
-                                    "mem": 8,
-                                    "storage": "EBS",
-                                    "price": 0.101
+                                    "mem": "13 ",
+                                    "storage": "Configured",
+                                    "price": 0.1421
                                 },
                                 {
-                                    "sku": "m5.xlarge",
+                                    "id": 2,
+                                    "sku": "n1-highmem-4",
                                     "cpu": 4,
-                                    "mem": 16,
-                                    "storage": "EBS",
-                                    "price": 0.202
+                                    "mem": "26 ",
+                                    "storage": "Configured",
+                                    "price": 0.2842
+                                },
+                                {
+                                    "id": 3,
+                                    "sku": "n1-highmem-8",
+                                    "cpu": 8,
+                                    "mem": "52 ",
+                                    "storage": "Configured",
+                                    "price": 0.5683
+                                },
+                                {
+                                    "id": 4,
+                                    "sku": "n1-highmem-16",
+                                    "cpu": 16,
+                                    "mem": "104 ",
+                                    "storage": "Configured",
+                                    "price": 1.1366
+                                },
+                                {
+                                    "id": 5,
+                                    "sku": "n1-highmem-32",
+                                    "cpu": 32,
+                                    "mem": "208 ",
+                                    "storage": "Configured",
+                                    "price": 2.2732
+                                },
+                                {
+                                    "id": 6,
+                                    "sku": "n1-highmem-64",
+                                    "cpu": 64,
+                                    "mem": "416 ",
+                                    "storage": "Configured",
+                                    "price": 4.5465
                                 }
                             ]
                         }
