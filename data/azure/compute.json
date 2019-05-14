@@ -1,0 +1,49 @@
+{
+    "name": "compute",
+    "desc": "TheAzure text goes here",
+    "services": [
+        {
+            "name": "VM Instance",
+            "products": [
+                {
+                    "name": "General Purpose - Current Generation",
+                    "skus": [
+                        {
+                            "sku": "zure-1",
+                            "cpu": 2,
+                            "mem": 0.5,
+                            "storage": "EBS",
+                            "price": 0.0056
+                        },
+                        {
+                            "sku": "zure-3",
+                            "cpu": 2,
+                            "mem": 1,
+                            "storage": "EBS",
+                            "price": 0.0122
+                        }
+                    ]
+                },
+                {
+                    "name": "Compute Optimized - Current Generation",
+                    "skus": [
+                        {
+                            "sku": "m5.large",
+                            "cpu": 2,
+                            "mem": 8,
+                            "storage": "EBS",
+                            "price": 0.101
+                        },
+                        {
+                            "sku": "m5.xlarge",
+                            "cpu": 4,
+                            "mem": 16,
+                            "storage": "EBS",
+                            "price": 0.202
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
